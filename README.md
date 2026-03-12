@@ -10,7 +10,7 @@ The site is built using [Docusaurus](https://docusaurus.io/), a modern static we
 
 ## 🌐 Live Website
 
-Access the live documentation site here: **[http://quickfix-j.github.io/quickfixj-pages](http://quickfix-j.github.io/quickfixj-pages)**
+Access the live documentation site here: **[https://quickfix-j.github.io/quickfixj-pages](https://quickfix-j.github.io/quickfixj-pages)**
 
 ## 🚀 Quick Start for Local Development
 
@@ -26,7 +26,7 @@ Clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/quickfix-j/quickfixj-pages.git
-cd quickfixj-docs
+cd quickfixj-pages
 npm install
 # or yarn install
 ```

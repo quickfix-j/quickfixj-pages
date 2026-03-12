@@ -1,0 +1,554 @@
+/* ===================================================================
+   HOME PAGE — Professional Finance Landing
+   
+   Dark mode: pure charcoal/black canvas. Green = accent ONLY
+   (borders, badges, CTAs, hover states — never backgrounds)
+   =================================================================== */
+
+/* ── HERO ───────────────────────────────────────────────────────── */
+.heroBanner {
+  background: linear-gradient(160deg, #0a0a0a 0%, #111111 40%, #161616 100%);
+  padding: 6rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial glow — barely visible green accent */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 60%, rgba(34, 197, 94, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(74, 222, 128, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Subtle grid overlay — finance terminal aesthetic */
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.heroSubtitle {
+  font-size: 1.35rem;
+  color: #d4d4d8;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.heroDescription {
+  font-size: 1.05rem;
+  color: #71717a;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  background: #22c55e;
+  color: #052e16;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.heroPrimary:hover {
+  background: #4ade80;
+  color: #052e16;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
+}
+
+.heroSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: #d4d4d8;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid #3f3f46;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.heroSecondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  text-decoration: none;
+  border-color: #71717a;
+}
+
+/* ── SECTION HEADERS ────────────────────────────────────────────── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #18181b;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .sectionHeader h2 {
+  color: #f4f4f5;
+}
+
+.sectionHeader p {
+  font-size: 1.1rem;
+  color: #71717a;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── PROTOCOLS SECTION ──────────────────────────────────────────── */
+.protocols {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+[data-theme='dark'] .protocols {
+  background: #111111;
+}
+
+.protocolGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.protocolCard {
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .protocolCard {
+  background: #161616;
+  border-color: #2a2a2a;
+}
+
+.protocolCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #22c55e;
+}
+
+[data-theme='dark'] .protocolCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: #22c55e;
+}
+
+.protocolCard h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0.75rem 0 0.5rem;
+}
+
+[data-theme='dark'] .protocolCard h3 {
+  color: #f4f4f5;
+}
+
+.protocolCard p {
+  font-size: 0.9rem;
+  color: #71717a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.protocolBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* ── ARCHITECTURE SECTION ───────────────────────────────────────── */
+.architecture {
+  padding: 5rem 2rem;
+  background: #f4f4f5;
+}
+
+[data-theme='dark'] .architecture {
+  background: #0d0d0d;
+}
+
+.archDiagram {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.archLayer {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.archLayer:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.archLayer:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.archLayer[data-layer="4"] {
+  background: #18181b;
+  color: #ffffff;
+  border-color: #22c55e;
+  border-width: 1px 1px 0 1px;
+}
+
+.archLayer[data-layer="3"] {
+  background: #27272a;
+  color: #ffffff;
+  border-color: #3f3f46;
+  border-width: 0 1px;
+}
+
+.archLayer[data-layer="2"] {
+  background: #3f3f46;
+  color: #ffffff;
+  border-color: #52525b;
+  border-width: 0 1px;
+}
+
+.archLayer[data-layer="1"] {
+  background: #52525b;
+  color: #ffffff;
+  border-color: #71717a;
+  border-width: 0 1px 1px 1px;
+}
+
+/* Light mode: keep the same dark aesthetic for the architecture diagram */
+[data-theme='light'] .archLayer[data-layer="4"] {
+  background: #18181b;
+  border-color: #22c55e;
+}
+[data-theme='light'] .archLayer[data-layer="3"] {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+[data-theme='light'] .archLayer[data-layer="2"] {
+  background: #3f3f46;
+  border-color: #52525b;
+}
+[data-theme='light'] .archLayer[data-layer="1"] {
+  background: #52525b;
+  border-color: #71717a;
+}
+
+.archLabel {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.archClasses {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.archCta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.archCta a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #16a34a;
+}
+
+[data-theme='dark'] .archCta a {
+  color: #4ade80;
+}
+
+/* ── FEATURES SECTION ───────────────────────────────────────────── */
+.features {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+[data-theme='dark'] .features {
+  background: #111111;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  padding: 1.75rem;
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .featureCard {
+  background: #161616;
+  border-color: #2a2a2a;
+}
+
+.featureCard:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .featureCard:hover {
+  border-color: rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.featureIcon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.featureCard h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #18181b;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .featureCard h3 {
+  color: #f4f4f5;
+}
+
+.featureCard p {
+  font-size: 0.88rem;
+  color: #71717a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── TECH STACK SECTION ─────────────────────────────────────────── */
+.techStack {
+  padding: 4rem 2rem;
+  background: #f4f4f5;
+}
+
+[data-theme='dark'] .techStack {
+  background: #0d0d0d;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.techPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease;
+}
+
+[data-theme='dark'] .techPill {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+.techPill:hover {
+  border-color: #22c55e;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+}
+
+[data-theme='dark'] .techPill:hover {
+  border-color: #22c55e;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+}
+
+.techName {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #18181b;
+}
+
+[data-theme='dark'] .techName {
+  color: #f4f4f5;
+}
+
+.techDesc {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+/* ── QUICK START SECTION ────────────────────────────────────────── */
+.quickStart {
+  padding: 5rem 2rem;
+  background: #18181b;
+}
+
+[data-theme='dark'] .quickStart {
+  background: #0a0a0a;
+  border-top: 1px solid #1f1f1f;
+}
+
+.quickStart .sectionHeader h2 {
+  color: #ffffff;
+}
+
+.quickStart .sectionHeader p {
+  color: #71717a;
+}
+
+.codeBlock {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .codeBlock {
+  background: #111111;
+  border-color: #2a2a2a;
+}
+
+.codeBlock pre {
+  margin: 0;
+  background: none;
+}
+
+.codeBlock code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #d4d4d8;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Green accent for comments in the code block */
+.codeBlock .comment {
+  color: #4ade80;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 4rem 1.5rem 3.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .protocols,
+  .architecture,
+  .features,
+  .techStack,
+  .quickStart {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .protocolGrid {
+    grid-template-columns: 1fr;
+  }
+}

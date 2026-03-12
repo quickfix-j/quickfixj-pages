@@ -1,0 +1,511 @@
+/*
+ * QuickFIX/J Documentation — Professional Finance Theme
+ *
+ * Design philosophy:
+ *   Dark mode  = True neutral blacks/charcoals (NO green tint in backgrounds)
+ *   Light mode = Clean whites and warm grays
+ *   Accent     = Light green (#22c55e) ONLY for interactive elements:
+ *                borders, badges, links, active states, hover highlights
+ *   Typography = Inter / system stack for crisp readability
+ */
+
+/* ===================================================================
+   CSS CUSTOM PROPERTIES — Light Mode
+   =================================================================== */
+:root {
+  /* ── Neutral palette ────────────────────────────────────────────── */
+  --quickfixj-white:    #ffffff;
+  --quickfixj-gray-50:  #fafafa;
+  --quickfixj-gray-100: #f4f4f5;
+  --quickfixj-gray-200: #e4e4e7;
+  --quickfixj-gray-300: #d4d4d8;
+  --quickfixj-gray-400: #a1a1aa;
+  --quickfixj-gray-500: #71717a;
+  --quickfixj-gray-600: #52525b;
+  --quickfixj-gray-700: #3f3f46;
+  --quickfixj-gray-800: #27272a;
+  --quickfixj-gray-900: #18181b;
+  --quickfixj-black:    #09090b;
+
+  /* ── Green accent palette (used sparingly) ──────────────────────── */
+  --quickfixj-green-900: #052e16;
+  --quickfixj-green-800: #14532d;
+  --quickfixj-green-700: #15803d;
+  --quickfixj-green-600: #16a34a;
+  --quickfixj-green-500: #22c55e;
+  --quickfixj-green-400: #4ade80;
+  --quickfixj-green-300: #86efac;
+  --quickfixj-green-200: #bbf7d0;
+  --quickfixj-green-100: #dcfce7;
+  --quickfixj-green-50:  #f0fdf4;
+
+  /* ── Semantic accents ───────────────────────────────────────────── */
+  --quickfixj-amber:  #f59e0b;
+  --quickfixj-red:    #ef4444;
+  --quickfixj-violet: #8b5cf6;
+
+  /* ── Docusaurus color bindings — Light mode ─────────────────────── */
+  --ifm-color-primary:          #16a34a;
+  --ifm-color-primary-dark:     #15803d;
+  --ifm-color-primary-darker:   #14532d;
+  --ifm-color-primary-darkest:  #052e16;
+  --ifm-color-primary-light:    #22c55e;
+  --ifm-color-primary-lighter:  #4ade80;
+  --ifm-color-primary-lightest: #86efac;
+
+  --ifm-color-success: #22c55e;
+  --ifm-color-warning: #f59e0b;
+  --ifm-color-danger:  #ef4444;
+
+  /* ── Typography ─────────────────────────────────────────────────── */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'SF Mono',
+    'Cascadia Code', Menlo, Consolas, 'Courier New', monospace;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-heading-font-weight: 700;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+
+  /* ── Spacing & radius ───────────────────────────────────────────── */
+  --ifm-global-radius: 8px;
+  --ifm-code-border-radius: 6px;
+
+  /* ── Navbar — solid dark ────────────────────────────────────────── */
+  --ifm-navbar-background-color: var(--quickfixj-gray-900);
+  --ifm-navbar-link-color: var(--quickfixj-gray-300);
+  --ifm-navbar-link-hover-color: var(--quickfixj-white);
+  --ifm-navbar-height: 3.75rem;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  /* ── Footer — solid dark ────────────────────────────────────────── */
+  --ifm-footer-background-color: var(--quickfixj-black);
+  --ifm-footer-color: var(--quickfixj-gray-500);
+  --ifm-footer-link-color: var(--quickfixj-gray-300);
+  --ifm-footer-link-hover-color: var(--quickfixj-green-400);
+  --ifm-footer-padding-vertical: 2.5rem;
+
+  /* ── Code blocks ────────────────────────────────────────────────── */
+  --ifm-code-font-size: 87.5%;
+  --ifm-code-padding-vertical: 0.15rem;
+  --ifm-code-padding-horizontal: 0.35rem;
+
+  /* ── Shadows ────────────────────────────────────────────────────── */
+  --quickfixj-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --quickfixj-shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  --quickfixj-shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* ===================================================================
+   DARK MODE — Pure neutral blacks/charcoals. Green = accent only.
+   =================================================================== */
+[data-theme='dark'] {
+  --ifm-color-primary:          #4ade80;
+  --ifm-color-primary-dark:     #22c55e;
+  --ifm-color-primary-darker:   #16a34a;
+  --ifm-color-primary-darkest:  #15803d;
+  --ifm-color-primary-light:    #86efac;
+  --ifm-color-primary-lighter:  #bbf7d0;
+  --ifm-color-primary-lightest: #dcfce7;
+
+  /* Backgrounds — PURE neutrals, no green tint */
+  --ifm-background-color:         #0d0d0d;
+  --ifm-background-surface-color: #141414;
+  --ifm-navbar-background-color:  #0d0d0d;
+  --ifm-footer-background-color:  #080808;
+
+  --quickfixj-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --quickfixj-shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+  --quickfixj-shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* ===================================================================
+   GLOBAL TYPOGRAPHY
+   =================================================================== */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+.markdown h1:first-child {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--quickfixj-gray-900);
+  border-bottom: 3px solid var(--quickfixj-green-500);
+  padding-bottom: 0.75rem;
+}
+
+[data-theme='dark'] .markdown h1:first-child {
+  color: var(--quickfixj-gray-100);
+  border-bottom-color: var(--quickfixj-green-500);
+}
+
+.markdown h2 {
+  font-size: 1.625rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--quickfixj-gray-800);
+  border-bottom: 1px solid var(--quickfixj-gray-200);
+  padding-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .markdown h2 {
+  color: var(--quickfixj-gray-200);
+  border-bottom-color: #2a2a2a;
+}
+
+.markdown h3 {
+  font-size: 1.25rem;
+  color: var(--quickfixj-gray-700);
+  margin-top: 2rem;
+}
+
+[data-theme='dark'] .markdown h3 {
+  color: var(--quickfixj-gray-300);
+}
+
+/* ===================================================================
+   NAVBAR
+   =================================================================== */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar__title {
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.03em;
+  color: var(--quickfixj-white) !important;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.navbar__link--active {
+  color: var(--quickfixj-green-400) !important;
+  font-weight: 600;
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+}
+
+/* ===================================================================
+   SIDEBAR
+   =================================================================== */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--quickfixj-gray-200);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right-color: #1f1f1f;
+}
+
+.menu__link {
+  font-size: 0.9rem;
+  font-weight: 450;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  transition: all 0.15s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--quickfixj-gray-50);
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: #1a1a1a;
+}
+
+.menu__link--active {
+  font-weight: 600;
+  background-color: var(--quickfixj-green-50) !important;
+  border-left: 3px solid var(--quickfixj-green-500);
+  color: var(--quickfixj-green-700) !important;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(74, 222, 128, 0.08) !important;
+  color: var(--quickfixj-green-400) !important;
+}
+
+.menu__list-item-collapsible .menu__link {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--quickfixj-gray-500);
+}
+
+/* ===================================================================
+   CONTENT AREA
+   =================================================================== */
+.main-wrapper {
+  background-color: var(--quickfixj-white);
+}
+
+[data-theme='dark'] .main-wrapper {
+  background-color: #0d0d0d;
+}
+
+article {
+  max-width: 52rem;
+}
+
+/* ===================================================================
+   CODE BLOCKS — Terminal aesthetic
+   =================================================================== */
+.prism-code {
+  border: 1px solid var(--quickfixj-gray-200);
+  box-shadow: var(--quickfixj-shadow-sm);
+}
+
+[data-theme='dark'] .prism-code {
+  border-color: #2a2a2a;
+  background-color: #111111 !important;
+}
+
+code {
+  background-color: var(--quickfixj-gray-100);
+  color: var(--quickfixj-green-800);
+  border: 1px solid var(--quickfixj-gray-200);
+  font-weight: 500;
+}
+
+[data-theme='dark'] code {
+  background-color: #1a1a1a;
+  color: var(--quickfixj-green-400);
+  border-color: #2a2a2a;
+}
+
+div[class*='codeBlockTitle'] {
+  background-color: var(--quickfixj-gray-900) !important;
+  color: var(--quickfixj-gray-300) !important;
+  border-bottom: 2px solid var(--quickfixj-green-500);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ===================================================================
+   TABLES — Data-grid aesthetic
+   =================================================================== */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--quickfixj-gray-200);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  box-shadow: var(--quickfixj-shadow-sm);
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+[data-theme='dark'] table {
+  border-color: #2a2a2a;
+}
+
+thead tr {
+  background-color: var(--quickfixj-gray-900) !important;
+}
+
+thead th {
+  color: var(--quickfixj-white) !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 2px solid var(--quickfixj-green-500) !important;
+  white-space: nowrap;
+}
+
+tbody tr {
+  transition: background-color 0.1s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--quickfixj-gray-50);
+}
+
+[data-theme='dark'] tbody tr:nth-child(even) {
+  background-color: #141414;
+}
+
+tbody tr:hover {
+  background-color: var(--quickfixj-green-50);
+}
+
+[data-theme='dark'] tbody tr:hover {
+  background-color: rgba(74, 222, 128, 0.04);
+}
+
+tbody td {
+  padding: 0.6rem 1rem !important;
+  border-bottom: 1px solid var(--quickfixj-gray-100) !important;
+}
+
+[data-theme='dark'] tbody td {
+  border-bottom-color: #1f1f1f !important;
+}
+
+/* ===================================================================
+   ADMONITIONS
+   =================================================================== */
+.admonition {
+  border-radius: var(--ifm-global-radius);
+  border-left-width: 4px;
+  box-shadow: var(--quickfixj-shadow-sm);
+}
+
+.admonition-heading h5 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* ===================================================================
+   TOC (Right sidebar)
+   =================================================================== */
+.table-of-contents__link {
+  font-size: 0.82rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* ===================================================================
+   ANNOUNCEMENT BAR
+   =================================================================== */
+div[class*='announcementBar'] {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+div[class*='announcementBar'] a {
+  color: var(--quickfixj-green-400);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ===================================================================
+   FOOTER
+   =================================================================== */
+.footer {
+  border-top: 1px solid #1f1f1f;
+}
+
+.footer__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--quickfixj-gray-400);
+}
+
+.footer__link-item {
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1f1f1f;
+}
+
+/* ===================================================================
+   BADGES / PILLS
+   =================================================================== */
+.badge--protocol {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  margin-right: 0.25rem;
+}
+
+.badge--fix  { background: var(--quickfixj-green-600); color: white; }
+.badge--java { background: var(--quickfixj-amber);     color: white; }
+.badge--nio  { background: var(--quickfixj-green-500); color: white; }
+.badge--jmx  { background: var(--quickfixj-violet);    color: white; }
+
+/* ===================================================================
+   SCROLLBAR (Webkit)
+   =================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--quickfixj-gray-300);
+  border-radius: 4px;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--quickfixj-gray-400);
+}
+
+/* ===================================================================
+   SELECTION
+   =================================================================== */
+::selection {
+  background: rgba(34, 197, 94, 0.2);
+  color: inherit;
+}
+
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
+@media (max-width: 996px) {
+  .markdown h1:first-child {
+    font-size: 1.75rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.375rem;
+  }
+}
+
+/* ===================================================================
+   PRINT STYLES
+   =================================================================== */
+@media print {
+  .navbar, .footer, .theme-doc-sidebar-container,
+  .table-of-contents, div[class*='announcementBar'] {
+    display: none !important;
+  }
+
+  article {
+    max-width: 100% !important;
+  }
+}

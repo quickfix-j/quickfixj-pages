@@ -9,12 +9,12 @@ sidebar_position: 2.5
 ## Runtime Dependencies
 
 ### Java Virtual Machine:
-JVM compatible with Oracle JRE Java 1.7.x or higher (Java 11+ or 21 recommended for modern deployments).
+JVM compatible with Java 1.8 or higher (Java 11 or 21 LTS recommended for modern deployments).
 
 ### Required run-time libraries:
 *   `quickfixj-core.jar`
-*   `quickfixj-msg-fix40.jar` through `quickfixj-msg-fix50sp2.jar`
-    *Or simply use `quickfixj-all.jar` which includes core and message JARs.*
+*   `quickfixj-messages-fix40.jar` through `quickfixj-messages-fixlatest.jar`
+    *Or simply use `quickfixj-all.jar` which includes core and all message JARs.*
 *   `mina-core-2.0.16.jar` (Socket handling via Java NIO)
 *   `slf4j-api.jar` (SLF4J library for JDK logging)
 
@@ -28,7 +28,7 @@ JVM compatible with Oracle JRE Java 1.7.x or higher (Java 11+ or 21 recommended 
 
 These instructions are for developers who don't want to use the prebuilt binaries or intend to modify and rebuild the QuickFIX/J code.
 
-If you are building the code from the command line you'll need to download and install [Maven](https://maven.apache.org/). Building from source requires Java 7+.
+If you are building the code from the command line you'll need to download and install [Maven](https://maven.apache.org/). Building from source requires Java 8+.
 
 1. **Checkout the Code:** Clone the repository.
    ```bash

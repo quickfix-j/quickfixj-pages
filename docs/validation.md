@@ -27,7 +27,7 @@ flowchart TD
 
 QuickFIX/J dynamically loads an XML definition file for each session, which it uses to validate if a message is of the right type, if it contains unsupported fields, or if required fields are missing.
 
-QuickFIX/J comes with several default definition files: `FIX40.xml`, `FIX41.xml`, `FIX42.xml`, `FIX43.xml`, `FIX44.xml`, and `FIXT11.xml`. These are generated directly from the respected FIX specification documents.
+QuickFIX/J comes with several default definition files: `FIX40.xml`, `FIX41.xml`, `FIX42.xml`, `FIX43.xml`, `FIX44.xml`, `FIX50.xml`, `FIX50SP1.xml`, `FIX50SP2.xml`, `FIXLATEST.xml`, and `FIXT11.xml`. These are generated directly from the respected FIX specification documents.
 
 ## Customizing Validation
 

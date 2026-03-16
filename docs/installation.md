@@ -15,7 +15,7 @@ JVM compatible with Java 1.8 or higher (Java 11 or 21 LTS recommended for modern
 *   `quickfixj-core.jar`
 *   `quickfixj-messages-fix40.jar` through `quickfixj-messages-fixlatest.jar`
     *Or simply use `quickfixj-all.jar` which includes core and all message JARs.*
-*   `mina-core-2.0.16.jar` (Socket handling via Java NIO)
+*   `mina-core-2.2.x.jar` (Socket handling via Java NIO)
 *   `slf4j-api.jar` (SLF4J library for JDK logging)
 
 ### Optional run-time libraries:

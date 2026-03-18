@@ -4,7 +4,7 @@
  * Design philosophy:
  *   Dark mode  = True neutral blacks/charcoals (NO green tint in backgrounds)
  *   Light mode = Clean whites and warm grays
- *   Accent     = Light green (#22c55e) ONLY for interactive elements:
+ *   Accent     = Blue (#3b82f6) ONLY for interactive elements:
  *                borders, badges, links, active states, hover highlights
  *   Typography = Inter / system stack for crisp readability
  */
@@ -27,17 +27,17 @@
   --quickfixj-gray-900: #18181b;
   --quickfixj-black:    #09090b;
 
-  /* ── Green accent palette (used sparingly) ──────────────────────── */
-  --quickfixj-green-900: #052e16;
-  --quickfixj-green-800: #14532d;
-  --quickfixj-green-700: #15803d;
-  --quickfixj-green-600: #16a34a;
-  --quickfixj-green-500: #22c55e;
-  --quickfixj-green-400: #4ade80;
-  --quickfixj-green-300: #86efac;
-  --quickfixj-green-200: #bbf7d0;
-  --quickfixj-green-100: #dcfce7;
-  --quickfixj-green-50:  #f0fdf4;
+  /* ── Blue accent palette (used sparingly) ───────────────────────── */
+  --quickfixj-blue-900: #172554;
+  --quickfixj-blue-800: #1e3a8a;
+  --quickfixj-blue-700: #1d4ed8;
+  --quickfixj-blue-600: #2563eb;
+  --quickfixj-blue-500: #3b82f6;
+  --quickfixj-blue-400: #60a5fa;
+  --quickfixj-blue-300: #93c5fd;
+  --quickfixj-blue-200: #bfdbfe;
+  --quickfixj-blue-100: #dbeafe;
+  --quickfixj-blue-50:  #eff6ff;
 
   /* ── Semantic accents ───────────────────────────────────────────── */
   --quickfixj-amber:  #f59e0b;
@@ -45,15 +45,15 @@
   --quickfixj-violet: #8b5cf6;
 
   /* ── Docusaurus color bindings — Light mode ─────────────────────── */
-  --ifm-color-primary:          #16a34a;
-  --ifm-color-primary-dark:     #15803d;
-  --ifm-color-primary-darker:   #14532d;
-  --ifm-color-primary-darkest:  #052e16;
-  --ifm-color-primary-light:    #22c55e;
-  --ifm-color-primary-lighter:  #4ade80;
-  --ifm-color-primary-lightest: #86efac;
+  --ifm-color-primary:          #2563eb;
+  --ifm-color-primary-dark:     #1d4ed8;
+  --ifm-color-primary-darker:   #1e3a8a;
+  --ifm-color-primary-darkest:  #172554;
+  --ifm-color-primary-light:    #3b82f6;
+  --ifm-color-primary-lighter:  #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
 
-  --ifm-color-success: #22c55e;
+  --ifm-color-success: #3b82f6;
   --ifm-color-warning: #f59e0b;
   --ifm-color-danger:  #ef4444;
 
@@ -82,7 +82,7 @@
   --ifm-footer-background-color: var(--quickfixj-black);
   --ifm-footer-color: var(--quickfixj-gray-500);
   --ifm-footer-link-color: var(--quickfixj-gray-300);
-  --ifm-footer-link-hover-color: var(--quickfixj-green-400);
+  --ifm-footer-link-hover-color: var(--quickfixj-blue-400);
   --ifm-footer-padding-vertical: 2.5rem;
 
   /* ── Code blocks ────────────────────────────────────────────────── */
@@ -97,16 +97,16 @@
 }
 
 /* ===================================================================
-   DARK MODE — Pure neutral blacks/charcoals. Green = accent only.
+   DARK MODE — Pure neutral blacks/charcoals. Blue = accent only.
    =================================================================== */
 [data-theme='dark'] {
-  --ifm-color-primary:          #4ade80;
-  --ifm-color-primary-dark:     #22c55e;
-  --ifm-color-primary-darker:   #16a34a;
-  --ifm-color-primary-darkest:  #15803d;
-  --ifm-color-primary-light:    #86efac;
-  --ifm-color-primary-lighter:  #bbf7d0;
-  --ifm-color-primary-lightest: #dcfce7;
+  --ifm-color-primary:          #60a5fa;
+  --ifm-color-primary-dark:     #3b82f6;
+  --ifm-color-primary-darker:   #2563eb;
+  --ifm-color-primary-darkest:  #1d4ed8;
+  --ifm-color-primary-light:    #93c5fd;
+  --ifm-color-primary-lighter:  #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
 
   /* Backgrounds — PURE neutrals, no green tint */
   --ifm-background-color:         #0d0d0d;
@@ -136,13 +136,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.25rem;
   margin-bottom: 1.5rem;
   color: var(--quickfixj-gray-900);
-  border-bottom: 3px solid var(--quickfixj-green-500);
+  border-bottom: 3px solid var(--quickfixj-blue-500);
   padding-bottom: 0.75rem;
 }
 
 [data-theme='dark'] .markdown h1:first-child {
   color: var(--quickfixj-gray-100);
-  border-bottom-color: var(--quickfixj-green-500);
+  border-bottom-color: var(--quickfixj-blue-500);
 }
 
 .markdown h2 {
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar__link--active {
-  color: var(--quickfixj-green-400) !important;
+  color: var(--quickfixj-blue-400) !important;
   font-weight: 600;
 }
 
@@ -229,14 +229,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu__link--active {
   font-weight: 600;
-  background-color: var(--quickfixj-green-50) !important;
-  border-left: 3px solid var(--quickfixj-green-500);
-  color: var(--quickfixj-green-700) !important;
+  background-color: var(--quickfixj-blue-50) !important;
+  border-left: 3px solid var(--quickfixj-blue-500);
+  color: var(--quickfixj-blue-700) !important;
 }
 
 [data-theme='dark'] .menu__link--active {
-  background-color: rgba(74, 222, 128, 0.08) !important;
-  color: var(--quickfixj-green-400) !important;
+  background-color: rgba(96, 165, 250, 0.08) !important;
+  color: var(--quickfixj-blue-400) !important;
 }
 
 .menu__list-item-collapsible .menu__link {
@@ -277,21 +277,21 @@ article {
 
 code {
   background-color: var(--quickfixj-gray-100);
-  color: var(--quickfixj-green-800);
+  color: var(--quickfixj-blue-800);
   border: 1px solid var(--quickfixj-gray-200);
   font-weight: 500;
 }
 
 [data-theme='dark'] code {
   background-color: #1a1a1a;
-  color: var(--quickfixj-green-400);
+  color: var(--quickfixj-blue-400);
   border-color: #2a2a2a;
 }
 
 div[class*='codeBlockTitle'] {
   background-color: var(--quickfixj-gray-900) !important;
   color: var(--quickfixj-gray-300) !important;
-  border-bottom: 2px solid var(--quickfixj-green-500);
+  border-bottom: 2px solid var(--quickfixj-blue-500);
   font-family: var(--ifm-font-family-monospace);
   font-size: 0.8rem;
   letter-spacing: 0.04em;
@@ -327,7 +327,7 @@ thead th {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.75rem 1rem !important;
-  border-bottom: 2px solid var(--quickfixj-green-500) !important;
+  border-bottom: 2px solid var(--quickfixj-blue-500) !important;
   white-space: nowrap;
 }
 
@@ -344,11 +344,11 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background-color: var(--quickfixj-green-50);
+  background-color: var(--quickfixj-blue-50);
 }
 
 [data-theme='dark'] tbody tr:hover {
-  background-color: rgba(74, 222, 128, 0.04);
+  background-color: rgba(96, 165, 250, 0.04);
 }
 
 tbody td {
@@ -398,7 +398,7 @@ div[class*='announcementBar'] {
 }
 
 div[class*='announcementBar'] a {
-  color: var(--quickfixj-green-400);
+  color: var(--quickfixj-blue-400);
   text-decoration: underline;
   font-weight: 600;
 }
@@ -445,9 +445,9 @@ div[class*='announcementBar'] a {
   margin-right: 0.25rem;
 }
 
-.badge--fix  { background: var(--quickfixj-green-600); color: white; }
+.badge--fix  { background: var(--quickfixj-blue-600); color: white; }
 .badge--java { background: var(--quickfixj-amber);     color: white; }
-.badge--nio  { background: var(--quickfixj-green-500); color: white; }
+.badge--nio  { background: var(--quickfixj-blue-500); color: white; }
 .badge--jmx  { background: var(--quickfixj-violet);    color: white; }
 
 /* ===================================================================
@@ -479,7 +479,7 @@ div[class*='announcementBar'] a {
    SELECTION
    =================================================================== */
 ::selection {
-  background: rgba(34, 197, 94, 0.2);
+  background: rgba(59, 130, 246, 0.2);
   color: inherit;
 }
 

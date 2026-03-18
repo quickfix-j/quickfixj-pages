@@ -1,7 +1,7 @@
 /* ===================================================================
    HOME PAGE — Professional Finance Landing
    
-   Dark mode: pure charcoal/black canvas. Green = accent ONLY
+   Dark mode: pure charcoal/black canvas. Blue = accent ONLY
    (borders, badges, CTAs, hover states — never backgrounds)
    =================================================================== */
 
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-/* Subtle radial glow — barely visible green accent */
+/* Subtle radial glow — barely visible blue accent */
 .heroBanner::before {
   content: '';
   position: absolute;
@@ -22,8 +22,8 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(ellipse at 20% 60%, rgba(34, 197, 94, 0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(74, 222, 128, 0.03) 0%, transparent 40%);
+    radial-gradient(ellipse at 20% 60%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(96, 165, 250, 0.03) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -50,15 +50,15 @@
 
 .heroBadge {
   display: inline-block;
-  background: rgba(34, 197, 94, 0.1);
-  color: #4ade80;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.35rem 0.9rem;
   border-radius: 100px;
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   margin-bottom: 1.5rem;
 }
 
@@ -97,22 +97,22 @@
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.75rem;
-  background: #22c55e;
-  color: #052e16;
+  background: #3b82f6;
+  color: #172554;
   font-weight: 700;
   font-size: 0.95rem;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 .heroPrimary:hover {
-  background: #4ade80;
-  color: #052e16;
+  background: #60a5fa;
+  color: #172554;
   text-decoration: none;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
 }
 
 .heroSecondary {
@@ -193,12 +193,12 @@
 .protocolCard:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-color: #22c55e;
+  border-color: #3b82f6;
 }
 
 [data-theme='dark'] .protocolCard:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border-color: #22c55e;
+  border-color: #3b82f6;
 }
 
 .protocolCard h3 {
@@ -266,7 +266,7 @@
 .archLayer[data-layer="4"] {
   background: #18181b;
   color: #ffffff;
-  border-color: #22c55e;
+  border-color: #3b82f6;
   border-width: 1px 1px 0 1px;
 }
 
@@ -294,7 +294,7 @@
 /* Light mode: keep the same dark aesthetic for the architecture diagram */
 [data-theme='light'] .archLayer[data-layer="4"] {
   background: #18181b;
-  border-color: #22c55e;
+  border-color: #3b82f6;
 }
 [data-theme='light'] .archLayer[data-layer="3"] {
   background: #27272a;
@@ -330,11 +330,11 @@
 .archCta a {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #16a34a;
+  color: #2563eb;
 }
 
 [data-theme='dark'] .archCta a {
-  color: #4ade80;
+  color: #60a5fa;
 }
 
 /* ── FEATURES SECTION ───────────────────────────────────────────── */
@@ -367,12 +367,12 @@
 }
 
 .featureCard:hover {
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: rgba(59, 130, 246, 0.4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 [data-theme='dark'] .featureCard:hover {
-  border-color: rgba(74, 222, 128, 0.3);
+  border-color: rgba(96, 165, 250, 0.3);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -435,13 +435,13 @@
 }
 
 .techPill:hover {
-  border-color: #22c55e;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
 }
 
 [data-theme='dark'] .techPill:hover {
-  border-color: #22c55e;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
 }
 
 .techName {
@@ -509,9 +509,9 @@
   padding: 0;
 }
 
-/* Green accent for comments in the code block */
+/* Blue accent for comments in the code block */
 .codeBlock .comment {
-  color: #4ade80;
+  color: #60a5fa;
 }
 
 /* ── RESPONSIVE ─────────────────────────────────────────────────── */

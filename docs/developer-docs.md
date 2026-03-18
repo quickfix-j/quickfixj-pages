@@ -92,50 +92,61 @@ This is the highly encouraged method. It uses specific message classes generated
 
 Your application should extend `MessageCracker` and implement `quickfix.Application`. You then call `crack(message, sessionID)` inside your `fromApp` method, and define `onMessage` handlers for the specific FIX messages you want to process.
 
+QuickFIX/J 1.6 or newer supports a `MessageCracker` that dynamically discovers message handling methods using either a method naming convention or the `@Handler` annotation.
+
 ```java
 import quickfix.*;
-import quickfix.fix44.ExecutionReport;
+import quickfix.MessageCracker;
 
-public class MyCrackerApp extends quickfix.MessageCracker implements quickfix.Application {
-    
-    // ... implement other Application methods ...
+public class MyApplication extends MessageCracker implements quickfix.Application {
 
     @Override
-    public void fromApp(Message message, SessionID sessionId) 
-            throws FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType {
-        // Let the MessageCracker figure out the specific type and call the right method
-        crack(message, sessionId);
+    public void fromApp(Message message, SessionID sessionID)
+            throws FieldNotFound, UnsupportedMessageType, IncorrectTagValue {
+        crack(message, sessionID);
     }
 
-    // Strongly-typed handler for FIX 4.4 Execution Reports
-    public void onMessage(ExecutionReport message, SessionID sessionID) 
-            throws FieldNotFound, UnsupportedMessageType, IncorrectTagValue {
-        
-        // Use strongly-typed field getters
-        String orderId = message.getOrderID().getValue();
-        char execType = message.getExecType().getValue();
-        
-        System.out.println("Execution for " + orderId + " with status " + execType);
-        
-        if (message.isSetLastPx()) {
-            double fillPrice = message.getLastPx().getValue();
-            System.out.println("Filled at price: " + fillPrice);
-        }
+    // Using the @Handler annotation
+    @Handler
+    public void myEmailHandler(quickfix.fix50.Email email, SessionID sessionID) {
+        // handler implementation
+    }
+
+    // By naming convention: method named "onMessage" with message as first arg and SessionID as second.
+    // Note: It is an error to have two handlers for the same message type.
+    public void onMessage(quickfix.fix44.Email email, SessionID sessionID) {
+        // handler implementation
     }
 }
 ```
 *Note: Any message type for which you haven't defined a handler will throw an `UnsupportedMessageType` exception by default.*
 
-### 2. Functional Interfaces (Lambda Support)
-For versions 1.16 and newer, you can use `ApplicationFunctionalAdapter` to handle messages using lambda expressions.
+If you prefer composition over inheritance, you can construct a `MessageCracker` with a delegate object. Handler methods on the delegate will be automatically discovered:
 
 ```java
-ApplicationFunctionalAdapter adapter = new ApplicationFunctionalAdapter(new MyApplication());
-
-adapter.addFromAppListener(quickfix.fix44.Email.class, (email, sessionID) -> {
-    // Handle the email message here
-});
+// myDelegate has the message handler methods
+MessageCracker cracker = new MessageCracker(myDelegate);
+cracker.crack(message, sessionID);
 ```
+
+### 2. Functional Interfaces (Lambda Support)
+For versions 1.6 and newer, you can use `ApplicationFunctionalAdapter` or `ApplicationExtendedFunctionalAdapter` to handle messages using lambda expressions.
+
+```java
+import quickfix.ApplicationFunctionalAdapter;
+
+public class EmailForwarder {
+    public void init(ApplicationFunctionalAdapter adapter) {
+        adapter.addOnLogonListener(this::captureUsername);
+        adapter.addFromAppListener(quickfix.fix44.Email.class, (email, sessionID) -> forward(email));
+    }
+
+    private void forward(quickfix.fix44.Email email) { /* ... */ }
+    private void captureUsername(SessionID sessionID) { /* ... */ }
+}
+```
+
+Both adapters support multiple registrations to the same event, and callbacks are invoked in FIFO order. However, FIFO order is not guaranteed between a generic listener and a type-specific listener registered for the same event.
 
 ### 3. Alternative Approaches to Field Retrieval
 If you are not using a `MessageCracker`, you can retrieve fields directly from the generic `Message` object.

@@ -60,3 +60,15 @@ The QFJ JMX `Session` MBean provides notifications related to state change event
 | `heartBeatTimeout`| Second heartbeat missed |
 | `refresh` | Session state refreshed from session store |
 | `reset` | Session state reset |
+
+### Related JMX Management Tools
+
+JConsole is a convenient tool for accessing JMX MBeans, but there are many other options available:
+
+| Tool | Type | Description |
+| :--- | :--- | :--- |
+| [VisualVM](https://visualvm.github.io/) | Part of the JDK | Included with the JDK; supports JMX connections. |
+| [MX4J](http://mx4j.sourceforge.net/) | Open Source | Includes an HTTP adapter that can be embedded in your QFJ process and accessed through a browser. |
+| [MC4J](http://mc4j.org/) | Open Source | A management UI built on the NetBeans platform. |
+| [JManage](http://www.jmanage.org/) | Open Source | A web-based management console with alerting and monitoring capabilities, including a command line interface. |
+| [WebJMX](http://webjmx.sourceforge.net/) | Open Source | JSP tag library for JMX access. |

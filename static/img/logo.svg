@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <title>QuickFIX/J Lightning Bolt Logo</title>
-  <path d="M7 2v11h3v9l7-11h-4l4-9z" fill="#3ECC5F"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24" role="img" aria-labelledby="qfj-logo-title">
+  <title id="qfj-logo-title">QuickFIX/J Logo</title>
+  <!-- Lightning bolt icon -->
+  <path d="M7 2v11h3v9l7-11h-4l4-9z" fill="#3ECC5F" aria-hidden="true"/>
+  <!-- QFJ lettering -->
+  <text x="22" y="18" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3ECC5F" letter-spacing="1" aria-hidden="true">QFJ</text>
 </svg>

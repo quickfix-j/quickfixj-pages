@@ -35,14 +35,14 @@ function HeroBanner() {
 const protocolFeatures = [
   {
     badge: 'FIX 4.x',
-    color: '#16a34a',
+    color: '#2563eb',
     title: 'FIX Protocol 4.x',
     description:
       'Full support for FIX 4.0, 4.1, 4.2, 4.3, and 4.4. Reliable session management, sequence tracking, and message recovery mechanisms.',
   },
   {
     badge: 'FIX 5.x',
-    color: '#22c55e',
+    color: '#3b82f6',
     title: 'FIX Protocol 5.x & FIXT',
     description:
       'Advanced support for FIX 5.0, 5.0 SP1, 5.0 SP2, and FIXT 1.1 with completely customizable DataDictionaries.',

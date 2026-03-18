@@ -65,7 +65,7 @@ const config: Config = {
       title: 'QuickFIX/J',
       logo: {
         alt: 'QuickFIX/J Logo',
-        src: 'img/logo.svg', // Assuming we will have or keep default
+        src: 'img/logo.svg',
       },
       items: [
         {

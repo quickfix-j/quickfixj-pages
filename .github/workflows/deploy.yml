@@ -43,7 +43,7 @@ jobs:
         run: npm run build
         env:
           # Assuming the github pages site is hosted at github.io/repo-name/
-          BASE_URL: /quickfixj-pages/
+          BASE_URL: quickfixj.org
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

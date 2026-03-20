@@ -23,13 +23,13 @@ sequenceDiagram
     E->>A: onLogon(SessionID)
     Note over E,A: FIX Logon (35=A) completed
     
-    rect rgb(30, 30, 30)
+    rect rgb(220, 230, 255)
         Note right of E: Admin Messages (Heartbeats, Logons)
         E->>A: toAdmin(Message, SessionID)
         E->>A: fromAdmin(Message, SessionID)
     end
     
-    rect rgb(20, 40, 20)
+    rect rgb(200, 240, 200)
         Note right of E: Application Messages (Orders, Fills)
         A->>E: toApp(Message, SessionID)
         E->>A: fromApp(Message, SessionID)

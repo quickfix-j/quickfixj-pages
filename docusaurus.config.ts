@@ -36,7 +36,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/quickfix-j/quickfixj-pages/edit/main/docs/',
+          editUrl: 'https://github.com/quickfix-j/quickfixj-pages/edit/main/',
         },
         blog: false, // Disabling blog for a purely technical docs site
         theme: {

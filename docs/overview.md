@@ -16,7 +16,7 @@ From buy-side asset managers connecting to broker networks to sell-side exchange
 
 ### Key Features
 
-* **Full FIX Protocol Coverage:** Supports FIX versions 4.0 through 4.4, and 5.0 / 5.0 SP1 / 5.0 SP2 (including FIXT 1.1).
+* **Full FIX Protocol Coverage:** Supports FIX versions 4.0 through 4.4, 5.0 / 5.0 SP1 / 5.0 SP2, and FIXLatest (including FIXT 1.1).
 * **100% Java:** Leverages the power and portability of the JVM with no native dependencies (no JNI required).
 * **High Performance & Scalability:** Engineered with multi-threading, optimized message parsing, and asynchronous NIO network communications via **Apache MINA**.
 * **Metadata-Driven:** Employs an XML-based DataDictionary for metadata-driven parsing, validation, and type-safe Java code generation for messages and fields.
@@ -40,14 +40,14 @@ To start using QuickFIX/J, add the following dependencies to your `pom.xml`. Qui
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-core</artifactId>
-    <version>2.3.1</version>
+    <version>3.0.0</version>
 </dependency>
 
 <!-- FIX 4.4 Message Definitions (Add versions as needed) -->
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-messages-fix44</artifactId>
-    <version>2.3.1</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 

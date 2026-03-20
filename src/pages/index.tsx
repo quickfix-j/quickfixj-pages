@@ -45,7 +45,7 @@ const protocolFeatures = [
     color: '#3b82f6',
     title: 'FIX Protocol 5.x & FIXT',
     description:
-      'Advanced support for FIX 5.0, 5.0 SP1, 5.0 SP2, and FIXT 1.1 with completely customizable DataDictionaries.',
+      'Advanced support for FIX 5.0, 5.0 SP1, 5.0 SP2, FIXLatest, and FIXT 1.1 with completely customizable DataDictionaries.',
   },
   {
     badge: 'MINA',
@@ -236,12 +236,12 @@ function QuickStartSection() {
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-core</artifactId>
-    <version>2.3.1</version>
+    <version>3.0.0</version>
 </dependency>
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-messages-fix44</artifactId>
-    <version>2.3.1</version>
+    <version>3.0.0</version>
 </dependency>`}</code>
           </pre>
         </div>

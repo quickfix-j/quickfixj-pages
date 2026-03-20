@@ -9,13 +9,13 @@ sidebar_position: 2.5
 ## Runtime Dependencies
 
 ### Java Virtual Machine:
-JVM compatible with Oracle JRE Java 1.7.x or higher (Java 11+ or 21 recommended for modern deployments).
+JVM compatible with Java 1.8 or higher (Java 11 or 21 LTS recommended for modern deployments).
 
 ### Required run-time libraries:
 *   `quickfixj-core.jar`
-*   `quickfixj-msg-fix40.jar` through `quickfixj-msg-fix50sp2.jar`
-    *Or simply use `quickfixj-all.jar` which includes core and message JARs.*
-*   `mina-core-2.0.16.jar` (Socket handling via Java NIO)
+*   `quickfixj-messages-fix40.jar` through `quickfixj-messages-fixlatest.jar`
+    *Or simply use `quickfixj-all.jar` which includes core and all message JARs.*
+*   `mina-core-2.2.x.jar` (Socket handling via Java NIO)
 *   `slf4j-api.jar` (SLF4J library for JDK logging)
 
 ### Optional run-time libraries:
@@ -28,20 +28,20 @@ JVM compatible with Oracle JRE Java 1.7.x or higher (Java 11+ or 21 recommended 
 
 These instructions are for developers who don't want to use the prebuilt binaries or intend to modify and rebuild the QuickFIX/J code.
 
-If you are building the code from the command line you'll need to download and install [Maven](https://maven.apache.org/). Building from source requires Java 7+.
+The repository includes a Maven wrapper (`./mvnw`), so you do not need to install Maven separately. Building from source requires Java 8+.
 
 1. **Checkout the Code:** Clone the repository.
    ```bash
    git clone https://github.com/quickfix-j/quickfixj.git
    cd quickfixj
    ```
-2. **Run Maven:** Run `mvn package` to build the QuickFIX/J and examples jar files. This generates all the FIX message-related code using XML data dictionaries.
+2. **Run Maven:** Run `./mvnw package` to build the QuickFIX/J and examples jar files. This generates all the FIX message-related code using XML data dictionaries.
    ```bash
-   mvn clean package
+   ./mvnw clean package
    ```
 3. **BigDecimal Option:** To use `java.math.BigDecimal` instead of `double` for fields like price and quantity, pass the `-Dgenerator.decimal` option:
    ```bash
-   mvn clean package -Dgenerator.decimal=true
+   ./mvnw clean package -Dgenerator.decimal=true
    ```
 
 ## Generating the database for JDBC based store and log

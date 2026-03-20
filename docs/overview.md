@@ -57,5 +57,5 @@ For more details on the repository, source code, and release notes, visit our [G
 
 QuickFIX/J is an active open-source project maintained by the community.
 * **Issues & Bug Tracking:** Please report bugs or feature requests on the [GitHub Issue Tracker](https://github.com/quickfix-j/quickfixj/issues).
-* **Mailing List:** Join the community discussion on the SourceForge mailing list.
-* **Stack Overflow:** Ask questions using the `quickfixj` tag.
+* **Mailing List:** Join the community discussion on the [SourceForge mailing list](https://sourceforge.net/p/quickfix/mailman/).
+* **Stack Overflow:** Ask questions using the [`quickfixj` tag](https://stackoverflow.com/questions/tagged/quickfixj).

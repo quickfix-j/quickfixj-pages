@@ -28,7 +28,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0 # Not needed if lastUpdated is not configured
+          fetch-depth: 0
+
+      - name: Fetch configuration reference from quickfixj source repo
+        run: |
+          curl -sSfL \
+            "https://raw.githubusercontent.com/quickfix-j/quickfixj/master/quickfixj-core/src/main/doc/usermanual/usage/configuration.md" \
+            -o docs/_configuration_reference.md
 
       - name: Setup Node
         uses: actions/setup-node@v6

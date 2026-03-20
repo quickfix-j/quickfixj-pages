@@ -20,9 +20,9 @@ flowchart TD
     F -- No --> H[Generate Session-Level Reject 35=3]
     H --> I[Drop Message<br>Do not notify Application]
     
-    style G fill:#14532d,stroke:#22c55e
-    style H fill:#450a0a,stroke:#ef4444
-    style I fill:#450a0a,stroke:#ef4444
+    style G fill:#16a34a,stroke:#4ade80,color:#ffffff
+    style H fill:#dc2626,stroke:#f87171,color:#ffffff
+    style I fill:#dc2626,stroke:#f87171,color:#ffffff
 ```
 
 QuickFIX/J dynamically loads an XML definition file for each session, which it uses to validate if a message is of the right type, if it contains unsupported fields, or if required fields are missing.

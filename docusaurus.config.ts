@@ -121,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: 'Mailing List',
-              href: 'https://sourceforge.net/p/quickfix/mailman/',
+              href: 'https://sourceforge.net/p/quickfixj/mailman/',
             },
             {
               label: 'Stack Overflow',

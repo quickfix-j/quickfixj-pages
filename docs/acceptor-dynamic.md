@@ -20,8 +20,8 @@ flowchart TD
     G --> H[Trigger onCreate]
     F -- No --> I[Disconnect / Reject Logon]
     
-    style G fill:#14532d,stroke:#22c55e
-    style I fill:#450a0a,stroke:#ef4444
+    style G fill:#16a34a,stroke:#4ade80,color:#ffffff
+    style I fill:#dc2626,stroke:#f87171,color:#ffffff
 ```
 
 Dynamic sessions are implemented using a *session provider*. A simple session provider implementation, `DynamicAcceptorSessionProvider`, is available for these scenarios. This provider specifies a session ID for a session definition that will be used as a template for setting session options. The session template in the configuration file should be marked with the `AcceptorTemplate=Y` setting so the session will not be registered as a normal static session.

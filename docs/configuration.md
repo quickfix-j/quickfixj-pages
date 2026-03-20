@@ -130,3 +130,9 @@ settings.setString(sessionId, "SocketConnectPort", "9876");
 settings.setString(sessionId, "StartTime", "00:00:00");
 settings.setString(sessionId, "EndTime", "23:59:00");
 ```
+
+## Full Configuration Options
+
+import ConfigurationReference from './_configuration_reference.md';
+
+<ConfigurationReference />

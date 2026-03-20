@@ -45,6 +45,7 @@ const sidebars: SidebarsConfig = {
         'jmx',
         'charset',
         'codegen',
+        'mina-filters',
         'deep-tech-reference',
       ],
     },

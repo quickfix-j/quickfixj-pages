@@ -72,5 +72,5 @@ Contributions to the documentation are welcome! If you find a typo, want to clar
 
 ## 🔗 Related Links
 - [QuickFIX/J Core Repository](https://github.com/quickfix-j/quickfixj)
-- [QuickFIX/J Mailing List](https://sourceforge.net/p/quickfix/mailman/)
+- [QuickFIX/J Mailing List](https://sourceforge.net/p/quickfixj/mailman/)
 - [Stack Overflow `quickfixj` Tag](https://stackoverflow.com/questions/tagged/quickfixj)

@@ -12,10 +12,10 @@ function HeroBanner() {
         <div className={styles.heroContent}>
           <div className={styles.heroBadge}>Enterprise FIX Engine</div>
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
-          <p className={styles.heroSubtitle}>
+          <p className={styles.heroSubtitle}>  
             {siteConfig.tagline}
           </p>
-          <p className={styles.heroDescription}>
+          <p className={styles.heroDescription}>  
             The premier open-source Java implementation of the FIX Protocol. Connect to exchanges, route orders, and process high-frequency market data with confidence.
           </p>
           <div className={styles.heroButtons}>
@@ -34,25 +34,18 @@ function HeroBanner() {
 
 const protocolFeatures = [
   {
-    badge: 'FIX 4.x',
+    badge: 'FIX 4.x – FIXLatest',
     color: '#2563eb',
-    title: 'FIX Protocol 4.x',
+    title: 'FIX 4.x · 5.x · FIXLatest & FIXT',
     description:
-      'Full support for FIX 4.0, 4.1, 4.2, 4.3, and 4.4. Reliable session management, sequence tracking, and message recovery mechanisms.',
-  },
-  {
-    badge: 'FIX 5.x',
-    color: '#3b82f6',
-    title: 'FIX Protocol 5.x & FIXT',
-    description:
-      'Advanced support for FIX 5.0, 5.0 SP1, 5.0 SP2, FIXLatest, and FIXT 1.1 with completely customizable DataDictionaries.',
+      'Comprehensive coverage from FIX 4.0 through FIX 5.0 SP2, FIXLatest, and FIXT 1.1. Robust session management, sequence tracking, message recovery, and fully customizable DataDictionaries across every major protocol version.',
   },
   {
     badge: 'MINA',
     color: '#f59e0b',
     title: 'NIO via Apache MINA',
     description:
-      'High-performance asynchronous networking capable of managing thousands of concurrent FIX sessions with minimal thread overhead.',
+      'High-throughput asynchronous networking capable of managing thousands of concurrent FIX sessions with minimal thread overhead.',
   },
   {
     badge: 'JMX',
@@ -68,7 +61,7 @@ const coreFeatures = [
     icon: '⚡',
     title: 'High Performance',
     description:
-      'Engineered for low-latency environments. Fully compatible with modern JVMs and optimized for multi-threading to handle massive FIX message throughput.',
+      'Engineered for high-throughput, resilient environments. Fully compatible with modern JVMs and optimized for multi-threading to handle massive FIX message volumes.',
   },
   {
     icon: '🏦',
@@ -167,7 +160,7 @@ function ArchitectureSection() {
         <div className={styles.archDiagram}>
           <div className={styles.archLayer} data-layer="4">
             <div className={styles.archLabel}>Application Layer</div>
-            <div className={styles.archClasses}>
+            <div className={styles.archClasses}>  
               quickfix.Application · MessageCracker · Business Logic
             </div>
           </div>

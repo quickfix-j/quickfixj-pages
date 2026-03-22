@@ -51,9 +51,7 @@ QuickFIX/J utilizes Apache MINA `IoAcceptor` and `IoConnector` for network trans
 By default, `SocketInitiator` and `SocketAcceptor` create a pool of NIO threads. 
 
 **Tuning Options:**
-* `SocketThreadPriority`: Modifies the JVM thread priority of socket reading threads.
-* `SocketUseOio`: Reverts from non-blocking NIO to Old I/O (blocking sockets) if set to `Y`. Generally not recommended unless diagnosing specific network card offloading or kernel-level buffering issues.
-* `SocketSendBufferSize` / `SocketReceiveBufferSize`: Tunes the underlying TCP socket buffer sizes.
+Socket-level tuning (keepalive, buffer sizes, TCP no-delay, linger, etc.) is controlled via the `Socket*` settings documented in [Configuration → Socket Options](configuration#socket-options-acceptor-or-initiator).
 
 ## JMX Integration
 

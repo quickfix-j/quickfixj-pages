@@ -51,16 +51,7 @@ QuickFIX/J utilizes Apache MINA `IoAcceptor` and `IoConnector` for network trans
 By default, `SocketInitiator` and `SocketAcceptor` create a pool of NIO threads. 
 
 **Tuning Options:**
-* `SocketKeepAlive`: Enables TCP keepalive on the socket.
-* `SocketOobInline`: Enables TCP out-of-band inline data.
-* `SocketReceiveBufferSize`: Hint for the size of the incoming network buffer.
-* `SocketSendBufferSize`: Hint for the size of the outgoing network buffer.
-* `SocketReuseAddress`: Sets the `SO_REUSEADDR` socket option.
-* `SocketLinger`: Sets the linger-on-close timeout (in seconds).
-* `SocketTcpNoDelay`: Disables Nagle's algorithm for lower latency (default: `Y`).
-* `SocketTrafficClass`: Sets the IP ToS/traffic class octet in outgoing packets.
-* `SocketSynchronousWrites`: Write messages synchronously instead of queuing (default: `N`).
-* `SocketSynchronousWriteTimeout`: Timeout in milliseconds for synchronous writes (default: `30000`).
+Socket-level tuning (keepalive, buffer sizes, TCP no-delay, linger, etc.) is controlled via the `Socket*` settings documented in [Configuration → Socket Options](configuration#socket-options-acceptor-or-initiator).
 
 ## JMX Integration
 

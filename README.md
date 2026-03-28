@@ -70,6 +70,10 @@ Contributions to the documentation are welcome! If you find a typo, want to clar
 4. Preview your changes locally.
 5. Submit a Pull Request.
 
+## 🙏 Acknowledgements
+
+The initial version of this web page was contributed by [@vinipx](https://github.com/vinipx).
+
 ## 🔗 Related Links
 - [QuickFIX/J Core Repository](https://github.com/quickfix-j/quickfixj)
 - [QuickFIX/J Mailing List](https://sourceforge.net/p/quickfixj/mailman/)

@@ -41,6 +41,13 @@ const protocolFeatures = [
       'Comprehensive coverage from FIX 4.0 through FIX 5.0 SP2, FIXLatest, and FIXT 1.1. Robust session management, sequence tracking, message recovery, and fully customizable DataDictionaries across every major protocol version.',
   },
   {
+    badge: 'Orchestra',
+    color: '#10b981',
+    title: 'Orchestra Code Generation',
+    description:
+      'Generate type-safe Java message and field classes directly from FIX Orchestra specification files. Build QuickFIX/J message libraries from any Orchestra-compliant protocol definition.',
+  },
+  {
     badge: 'MINA',
     color: '#f59e0b',
     title: 'NIO via Apache MINA',

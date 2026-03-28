@@ -183,6 +183,7 @@
   border-radius: 12px;
   padding: 1.75rem;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 [data-theme='dark'] .protocolCard {

@@ -54,6 +54,13 @@ const protocolFeatures = [
     description:
       'Real-time introspection. Monitor session states, sequence numbers, and trigger manual logons/logouts without JVM restarts.',
   },
+  {
+    badge: 'Orchestra',
+    color: '#10b981',
+    title: 'Orchestra Code Generation',
+    description:
+      'Generate type-safe Java message and field classes directly from FIX Orchestra specification files. Build QuickFIX/J message libraries from any Orchestra-compliant protocol definition.',
+  },
 ];
 
 const coreFeatures = [

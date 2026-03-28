@@ -3,6 +3,7 @@
 [![Built with Docusaurus](https://img.shields.io/badge/built%20with-Docusaurus-blue.svg)](https://docusaurus.io/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed_to-GitHub_Pages-2ea44f.svg?logo=github)](http://quickfix-j.github.io/quickfixj-pages)
 [![License: QuickFIX](https://img.shields.io/badge/License%3A-QuickFIX-blue)](https://github.com/quickfix-j/quickfixj/blob/master/LICENSE)
+[![Orchestra](https://img.shields.io/badge/Orchestra-Code%20Generation-10b981)](https://www.fixtrading.org/standards/orchestra/)
 
 This repository contains the source code for the official documentation of **QuickFIX/J**, the premier open-source Java implementation of the FIX (Financial Information eXchange) Protocol.
 

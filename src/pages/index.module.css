@@ -1,16 +1,21 @@
 /* ===================================================================
    HOME PAGE — Professional Finance Landing
    
-   Dark mode: pure charcoal/black canvas. Blue = accent ONLY
-   (borders, badges, CTAs, hover states — never backgrounds)
+   Light mode: clean whites and warm grays
+   Dark mode:  pure charcoal/black canvas. Blue = accent ONLY
+               (borders, badges, CTAs, hover states — never backgrounds)
    =================================================================== */
 
 /* ── HERO ───────────────────────────────────────────────────────── */
 .heroBanner {
-  background: linear-gradient(160deg, #0a0a0a 0%, #111111 40%, #161616 100%);
+  background: linear-gradient(160deg, #f8fafc 0%, #f1f5f9 40%, #e8edf2 100%);
   padding: 6rem 2rem 5rem;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme='dark'] .heroBanner {
+  background: linear-gradient(160deg, #0a0a0a 0%, #111111 40%, #161616 100%);
 }
 
 /* Subtle radial glow — barely visible blue accent */
@@ -22,9 +27,15 @@
   right: 0;
   bottom: 0;
   background:
+    radial-gradient(ellipse at 20% 60%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(96, 165, 250, 0.02) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+[data-theme='dark'] .heroBanner::before {
+  background:
     radial-gradient(ellipse at 20% 60%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, rgba(96, 165, 250, 0.03) 0%, transparent 40%);
-  pointer-events: none;
 }
 
 /* Subtle grid overlay — finance terminal aesthetic */
@@ -36,10 +47,16 @@
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
+}
+
+[data-theme='dark'] .heroBanner::after {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
 .heroContent {
@@ -68,23 +85,35 @@
   letter-spacing: -0.04em;
   line-height: 1.05;
   margin-bottom: 0.75rem;
+  color: #18181b;
+}
+
+[data-theme='dark'] .heroTitle {
   color: #ffffff;
 }
 
 .heroSubtitle {
   font-size: 1.35rem;
-  color: #d4d4d8;
+  color: #3f3f46;
   font-weight: 400;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
 
+[data-theme='dark'] .heroSubtitle {
+  color: #d4d4d8;
+}
+
 .heroDescription {
   font-size: 1.05rem;
-  color: #71717a;
+  color: #52525b;
   line-height: 1.6;
   margin-bottom: 2.5rem;
   max-width: 580px;
+}
+
+[data-theme='dark'] .heroDescription {
+  color: #71717a;
 }
 
 .heroButtons {
@@ -120,19 +149,30 @@
   align-items: center;
   padding: 0.75rem 1.75rem;
   background: transparent;
-  color: #d4d4d8;
+  color: #3f3f46;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 1px solid #3f3f46;
+  border: 1px solid #a1a1aa;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .heroSecondary:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #18181b;
+  text-decoration: none;
+  border-color: #52525b;
+}
+
+[data-theme='dark'] .heroSecondary {
+  color: #d4d4d8;
+  border-color: #3f3f46;
+}
+
+[data-theme='dark'] .heroSecondary:hover {
   background: rgba(255, 255, 255, 0.04);
   color: #ffffff;
-  text-decoration: none;
   border-color: #71717a;
 }
 
@@ -468,15 +508,19 @@
 /* ── QUICK START SECTION ────────────────────────────────────────── */
 .quickStart {
   padding: 5rem 2rem;
-  background: #18181b;
+  background: #f4f4f5;
 }
 
 [data-theme='dark'] .quickStart {
-  background: #0a0a0a;
+  background: #18181b;
   border-top: 1px solid #1f1f1f;
 }
 
 .quickStart .sectionHeader h2 {
+  color: #18181b;
+}
+
+[data-theme='dark'] .quickStart .sectionHeader h2 {
   color: #ffffff;
 }
 
@@ -487,15 +531,15 @@
 .codeBlock {
   max-width: 600px;
   margin: 0 auto;
-  background: #0d0d0d;
-  border: 1px solid #2a2a2a;
+  background: #1e1e1e;
+  border: 1px solid #3f3f46;
   border-radius: 12px;
   padding: 1.5rem 2rem;
   overflow-x: auto;
 }
 
 [data-theme='dark'] .codeBlock {
-  background: #111111;
+  background: #0d0d0d;
   border-color: #2a2a2a;
 }
 

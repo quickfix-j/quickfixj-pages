@@ -177,6 +177,18 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* The color mode toggle icon uses fill="currentColor", so it inherits
+   the button's `color` value. Since this site keeps a dark navbar in
+   both light and dark themes, we must set an explicit light color here
+   — otherwise the icon is black-on-black and invisible. */
+.navbar__items--right button {
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__items--right button:hover {
+  color: var(--ifm-navbar-link-hover-color);
+}
+
 .navbar__title {
   font-weight: 800;
   font-size: 1.3rem;

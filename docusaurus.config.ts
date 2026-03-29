@@ -94,6 +94,10 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'colorMode',
+          position: 'right',
+        },
       ],
     },
     footer: {

@@ -71,12 +71,10 @@
   --ifm-global-radius: 8px;
   --ifm-code-border-radius: 6px;
 
-  /* ── Navbar — solid dark ────────────────────────────────────────── */
-  --ifm-navbar-background-color: var(--quickfixj-gray-900);
-  --ifm-navbar-link-color: var(--quickfixj-gray-300);
-  --ifm-navbar-link-hover-color: var(--quickfixj-white);
+  /* ── Navbar ─────────────────────────────────────────────────────── */
+  --ifm-navbar-link-color: var(--quickfixj-gray-700);
+  --ifm-navbar-link-hover-color: var(--quickfixj-gray-900);
   --ifm-navbar-height: 3.75rem;
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06);
 
   /* ── Footer — solid dark ────────────────────────────────────────── */
   --ifm-footer-background-color: var(--quickfixj-black);
@@ -112,6 +110,8 @@
   --ifm-background-color:         #0d0d0d;
   --ifm-background-surface-color: #141414;
   --ifm-navbar-background-color:  #0d0d0d;
+  --ifm-navbar-link-color:        var(--quickfixj-gray-300);
+  --ifm-navbar-link-hover-color:  var(--quickfixj-white);
   --ifm-footer-background-color:  #080808;
 
   --quickfixj-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
@@ -174,26 +174,18 @@ h1, h2, h3, h4, h5, h6 {
    =================================================================== */
 .navbar {
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--quickfixj-gray-200);
 }
 
-/* The color mode toggle icon uses fill="currentColor", so it inherits
-   the button's `color` value. Since this site keeps a dark navbar in
-   both light and dark themes, we must set an explicit light color here
-   — otherwise the icon is black-on-black and invisible. */
-.navbar__items--right button {
-  color: var(--ifm-navbar-link-color);
-}
-
-.navbar__items--right button:hover {
-  color: var(--ifm-navbar-link-hover-color);
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
 .navbar__title {
   font-weight: 800;
   font-size: 1.3rem;
   letter-spacing: -0.03em;
-  color: var(--quickfixj-white) !important;
+  color: var(--ifm-navbar-link-color) !important;
 }
 
 .navbar__link {

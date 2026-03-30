@@ -64,6 +64,7 @@ const config: Config = {
       logo: {
         alt: 'QuickFIX/J Logo',
         src: 'img/logo.png',
+        srcDark: 'img/logo-dark.png',
       },
       items: [
         {

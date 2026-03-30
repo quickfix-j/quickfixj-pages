@@ -52,8 +52,6 @@ const config: Config = {
       id: 'quickfixj_news',
       content:
         '⚡ QuickFIX/J — The industry standard open source FIX engine for Java. <a target="_blank" rel="noopener noreferrer" href="https://github.com/quickfix-j/quickfixj">Star us on GitHub</a>',
-      backgroundColor: '#111111',
-      textColor: '#d4d4d8',
       isCloseable: true,
     },
     colorMode: {

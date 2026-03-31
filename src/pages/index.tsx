@@ -13,15 +13,17 @@ function HeroBanner() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroBadge}>Enterprise FIX Engine</div>
-          <ThemedImage
-            className={styles.heroLogo}
-            alt="QuickFIX/J Logo"
-            sources={{
-              light: useBaseUrl('/img/logo.png'),
-              dark: useBaseUrl('/img/logo-dark.png'),
-            }}
-          />
-          <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
+          <div className={styles.heroTitleRow}>
+            <ThemedImage
+              className={styles.heroLogo}
+              alt="QuickFIX/J Logo"
+              sources={{
+                light: useBaseUrl('/img/logo.png'),
+                dark: useBaseUrl('/img/logo-dark.png'),
+              }}
+            />
+            <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
+          </div>
           <p className={styles.heroSubtitle}>  
             {siteConfig.tagline}
           </p>

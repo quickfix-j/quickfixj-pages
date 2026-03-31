@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'QuickFIX/J',
   tagline: 'The Open Source FIX Protocol Engine for Java',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true,
@@ -63,7 +63,8 @@ const config: Config = {
       title: 'QuickFIX/J',
       logo: {
         alt: 'QuickFIX/J Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
+        srcDark: 'img/logo-dark.png',
       },
       items: [
         {

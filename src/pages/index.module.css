@@ -79,6 +79,12 @@
   margin-bottom: 1.5rem;
 }
 
+.heroLogo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
 .heroTitle {
   font-size: 4rem;
   font-weight: 900;

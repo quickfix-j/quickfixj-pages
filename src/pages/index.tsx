@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
 function HeroBanner() {
@@ -11,6 +13,14 @@ function HeroBanner() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroBadge}>Enterprise FIX Engine</div>
+          <ThemedImage
+            className={styles.heroLogo}
+            alt="QuickFIX/J Logo"
+            sources={{
+              light: useBaseUrl('/img/logo.png'),
+              dark: useBaseUrl('/img/logo-dark.png'),
+            }}
+          />
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <p className={styles.heroSubtitle}>  
             {siteConfig.tagline}

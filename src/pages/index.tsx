@@ -14,6 +14,7 @@ function HeroBanner() {
         <div className={styles.heroContent}>
           <div className={styles.heroBadge}>Enterprise FIX Engine</div>
           <div className={styles.heroTitleRow}>
+            <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
             <ThemedImage
               className={styles.heroLogo}
               alt="QuickFIX/J Logo"
@@ -22,7 +23,6 @@ function HeroBanner() {
                 dark: useBaseUrl('/img/logo-dark.png'),
               }}
             />
-            <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           </div>
           <p className={styles.heroSubtitle}>  
             {siteConfig.tagline}

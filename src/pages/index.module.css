@@ -79,12 +79,25 @@
   margin-bottom: 1.5rem;
 }
 
+.heroLogo {
+  height: 80px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.heroTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 .heroTitle {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.05;
-  margin-bottom: 0.75rem;
+  margin: 0;
   color: #18181b;
 }
 

@@ -240,4 +240,7 @@ void sendOrderCancelRequest() {
 ```
 
 ### Note on Threading
+
 `Session.sendToTarget()` is thread-safe. You can call it from any thread in your application. The message will be serialized, persisted to the `MessageStore`, and placed on the socket's write buffer asynchronously.
+
+For a full explanation of QuickFIX/J's threading strategies (single-threaded vs. thread-per-session), queue capacity configuration, and thread safety requirements for your `Application` implementation, see the [Threading Developer Guide](https://github.com/quickfix-j/quickfixj/blob/master/docs/threading-developer-guide.md).

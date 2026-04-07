@@ -66,3 +66,5 @@ QuickFIX/J offers distinct threading models for connection handling, tailored fo
 
 2. **ThreadedSocketAcceptor / ThreadedSocketInitiator (One-Thread-Per-Session)**
    Spawns a dedicated thread for processing messages on each connection. Ideal for scenarios with a small number of high-throughput connections where you want to eliminate context-switching overhead and allocate maximum CPU time directly to message processing.
+
+For a deep technical reference on the threading internals — including the `EventHandlingStrategy` implementations, the `QFJ Timer` thread, `Session.next()` behaviour, and queue back-pressure — see the [Threading Model Technical Reference](https://github.com/quickfix-j/quickfixj/blob/master/docs/threading-model.md).

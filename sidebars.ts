@@ -21,6 +21,11 @@ const sidebars: SidebarsConfig = {
       items: [
         'architecture',
         'use-cases',
+        {
+          type: 'link',
+          label: 'Threading Model (Technical Reference)',
+          href: 'https://github.com/quickfix-j/quickfixj/blob/master/docs/threading-model.md',
+        },
       ],
     },
     {
@@ -32,6 +37,11 @@ const sidebars: SidebarsConfig = {
         'repeating-groups',
         'user-defined-fields',
         'validation',
+        {
+          type: 'link',
+          label: 'Threading Developer Guide',
+          href: 'https://github.com/quickfix-j/quickfixj/blob/master/docs/threading-developer-guide.md',
+        },
       ],
     },
     {

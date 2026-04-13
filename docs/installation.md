@@ -20,7 +20,7 @@ JVM compatible with Java 1.8 or higher (Java 11 or 21 LTS recommended for modern
 
 ### Optional run-time libraries:
 *   `log4j.jar`
-*   `HikariCP.jar` (Required for JDBC connection pooling, since QFJ 3.0.0)
+*   `HikariCP.jar` (Required for JDBC connection pooling)
 *   `sleepycat-je.jar` (Needed if the SleepyCat JE message store is used)
 
 ## Building QuickFIX/J

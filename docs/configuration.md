@@ -90,7 +90,7 @@ DataDictionary=FIX42.xml
 | `StartTime` / `EndTime` | Defines the daily or weekly session schedule. Determines when sequence numbers are reset based on the active session boundary. |
 | `ResetOnLogon` | If `Y`, forces sequence numbers to reset to 1 every time a Logon occurs. |
 
-### Validation
+### Validation {#validation-subset}
 
 | Parameter | Description |
 |-----------|-------------|

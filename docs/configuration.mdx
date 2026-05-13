@@ -4,6 +4,8 @@ title: Configuration
 sidebar_position: 3
 ---
 
+import ConfigurationReference from './_configuration_reference.mdx';
+
 # Configuration
 
 QuickFIX/J is heavily metadata-driven and relies on a plain text configuration file to manage connection details, session settings, persistence, validation rules, and dictionary paths.
@@ -90,7 +92,9 @@ DataDictionary=FIX42.xml
 | `StartTime` / `EndTime` | Defines the daily or weekly session schedule. Determines when sequence numbers are reset based on the active session boundary. |
 | `ResetOnLogon` | If `Y`, forces sequence numbers to reset to 1 every time a Logon occurs. |
 
-### Validation {#validation-subset}
+<a id="validation-subset"></a>
+
+### Validation
 
 | Parameter | Description |
 |-----------|-------------|
@@ -132,7 +136,5 @@ settings.setString(sessionId, "EndTime", "23:59:00");
 ```
 
 ## Full Configuration Options
-
-import ConfigurationReference from './_configuration_reference.mdx';
 
 <ConfigurationReference />

@@ -6,7 +6,7 @@ import type {Node} from 'unist';
 import type {Root} from 'mdast';
 
 const VERSION_PLACEHOLDER = '{{QUICKFIXJ_VERSION}}';
-const VERSION_FALLBACK = '3.0.0';
+const VERSION_FALLBACK = '3.0.1';
 
 async function fetchLatestVersion(fallback: string): Promise<string> {
   try {

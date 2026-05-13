@@ -34,7 +34,7 @@ jobs:
         run: |
           curl -sSfL \
             "https://raw.githubusercontent.com/quickfix-j/quickfixj/master/quickfixj-core/src/main/doc/usermanual/usage/configuration.md" \
-            -o docs/_configuration_reference.md
+            -o docs/_configuration_reference.mdx
 
       - name: Setup Node
         uses: actions/setup-node@v6

@@ -16,8 +16,8 @@ QuickFIX/J comes with several example applications located in the `quickfix/exam
 The QuickFIX/J version number can be determined by running the core JAR file from the command line:
 
 ```bash
-java -jar quickfixj-core-3.0.0.jar
+java -jar quickfixj-core-{{QUICKFIXJ_VERSION}}.jar
 
 # Output:
-# Version: 3.0.0
+# Version: {{QUICKFIXJ_VERSION}}
 ```

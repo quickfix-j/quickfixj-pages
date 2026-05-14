@@ -92,9 +92,7 @@ DataDictionary=FIX42.xml
 | `StartTime` / `EndTime` | Defines the daily or weekly session schedule. Determines when sequence numbers are reset based on the active session boundary. |
 | `ResetOnLogon` | If `Y`, forces sequence numbers to reset to 1 every time a Logon occurs. |
 
-<a id="validation-subset"></a>
-
-### Validation
+### Basic Validation
 
 | Parameter | Description |
 |-----------|-------------|
@@ -103,6 +101,8 @@ DataDictionary=FIX42.xml
 | `ValidateFieldsOutOfOrder`| If `N` (default `Y`), allows fields to appear out of the strict order defined in the XML. |
 | `ValidateChecksum` | If `Y`, validates the Checksum (Tag 10) at the end of the message. |
 | `CheckLatency` | If `Y`, checks the `SendingTime` (Tag 52) against the local system clock and rejects messages exceeding `MaxLatency` (default 120s). |
+
+For the complete list of validation settings, see [Validation](#validation) in the Full Configuration Options reference below.
 
 ### Storage & Logging
 

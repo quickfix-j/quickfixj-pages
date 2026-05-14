@@ -4,4 +4,4 @@ build/
 node_modules/
 
 # Generated at build time by the deploy workflow
-docs/_configuration_reference.md
+docs/_configuration_reference.mdx

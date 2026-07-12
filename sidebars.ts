@@ -29,6 +29,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'developer-docs',
+        'session-state-listener',
         'repeating-groups',
         'user-defined-fields',
         'validation',

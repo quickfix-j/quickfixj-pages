@@ -235,6 +235,8 @@ function TechStackSection() {
 }
 
 function QuickStartSection() {
+  const { siteConfig } = useDocusaurusContext();
+  const version = siteConfig.customFields?.quickfixjVersion as string;
   return (
     <section className={styles.quickStart}>
       <div className="container">
@@ -248,12 +250,12 @@ function QuickStartSection() {
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-core</artifactId>
-    <version>3.0.0</version>
+    <version>${version}</version>
 </dependency>
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-messages-fix44</artifactId>
-    <version>3.0.0</version>
+    <version>${version}</version>
 </dependency>`}</code>
           </pre>
         </div>

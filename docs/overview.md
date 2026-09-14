@@ -40,14 +40,14 @@ To start using QuickFIX/J, add the following dependencies to your `pom.xml`. Qui
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-core</artifactId>
-    <version>3.0.0</version>
+    <version>{{QUICKFIXJ_VERSION}}</version>
 </dependency>
 
 <!-- FIX 4.4 Message Definitions (Add versions as needed) -->
 <dependency>
     <groupId>org.quickfixj</groupId>
     <artifactId>quickfixj-messages-fix44</artifactId>
-    <version>3.0.0</version>
+    <version>{{QUICKFIXJ_VERSION}}</version>
 </dependency>
 ```
 

@@ -8,6 +8,11 @@ import type {Root} from 'mdast';
 const VERSION_PLACEHOLDER = '{{QUICKFIXJ_VERSION}}';
 const VERSION_FALLBACK = '3.0.1';
 
+function normalizeVersionTag(tag: string): string {
+  const match = tag.match(/(\d+)[._](\d+)[._](\d+)([-+].*)?$/);
+  return match ? `${match[1]}.${match[2]}.${match[3]}${match[4] ?? ''}` : tag.replace(/^v/, '');
+}
+
 async function fetchLatestVersion(fallback: string): Promise<string> {
   try {
     const response = await fetch(
@@ -19,7 +24,7 @@ async function fetchLatestVersion(fallback: string): Promise<string> {
       return fallback;
     }
     const data = (await response.json()) as {tag_name: string};
-    return data.tag_name.replace(/^v/, '');
+    return normalizeVersionTag(data.tag_name);
   } catch (err) {
     console.warn(`Failed to fetch latest QuickFIX/J version: ${err}. Using fallback ${fallback}`);
     return fallback;
